@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+
+#Force example.com to www.example.com
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^example.com [NC]
+RewriteRule ^(.*)$ http://www.example.com/$1 [L,R=301,NC]
+
+</IfModule>
